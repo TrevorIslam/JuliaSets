@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+
+
+<html lang="en" dir="ltr">
+  <style>
+    .slider {
+      -webkit-appearance: none;
+      width: 80%;
+      height: 10px;
+      border-radius: 5px;
+      background: #d3d3d3;
+      outline: none;
+      opacity: 0.7;
+      -webkit-transition: .2s;
+      transition: opacity .2s;
+    }
+
+    .slider::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      appearance: none;
+      width: 25px;
+      height: 25px;
+      border-radius: 50%;
+      background: #4CAF50;
+      cursor: pointer;
+    }
+
+    .slidecontainer {
+      width: 100%; /* Width of the outside container */
+    }
+  </style>
+  <head>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.0.0/p5.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.0/jquery.slim.js"></script>
+    <script src="ComplexNumber.js"></script>
+    <script src="julia.js"></script>
+  </head>
+  <body>
+    <script src="index.js"></script>
+    <div id="canvas"></div>
+    <div class="slidecontainer">
+      c (r) =
+      <input type="range" id="crealslider" class="slider" value="0.285" min="-2" max="2" step="0.01"/>
+      <span id="crealvalue">0.285</span>
+      </div>
+    <div class="slidecontainer">
+      c (i) =
+      <input type="range" id="cimagslider" class="slider" value="0.01" min="-2" max="2" step="0.01"/>
+      <span id="cimagvalue">0.01</span>i
+    </div>
+    <div class="slidecontainer">
+      Zoom:
+      <input type="range" id="zoomslider" class="slider" value="200" min="0" max="1000" step="20"/>
+      <span id="zoomvalue">200</span>
+    </div>
+  </body>
+</html>
