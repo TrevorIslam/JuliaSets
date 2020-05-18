@@ -37,21 +37,26 @@
   </head>
   <body>
     <script src="index.js"></script>
+    <a href="https://trevorislam.github.io">Portfolio</a>
     <div id="canvas"></div>
+    f(z) <=> z^2 + c
     <div class="slidecontainer">
       c (r) =
-      <input type="range" id="crealslider" class="slider" value="0.285" min="-2" max="2" step="0.01"/>
-      <span id="crealvalue">0.285</span>
+      <input type="range" id="crealslider" class="slider" value="0" min="-2" max="2" step="0.01"/>
+      <span id="crealvalue">0</span>
       </div>
     <div class="slidecontainer">
       c (i) =
-      <input type="range" id="cimagslider" class="slider" value="0.01" min="-2" max="2" step="0.01"/>
-      <span id="cimagvalue">0.01</span>i
+      <input type="range" id="cimagslider" class="slider" value="0" min="-2" max="2" step="0.01"/>
+      <span id="cimagvalue">0</span>i
     </div>
     <div class="slidecontainer">
       Zoom:
-      <input type="range" id="zoomslider" class="slider" value="200" min="0" max="1000" step="20"/>
+      <input type="range" id="zoomslider" class="slider" value="200" min="0" max="1000" step="10"/>
       <span id="zoomvalue">200</span>
+    </div>
+    <div>
+      <button type="button" id="startbutton">Draw Julia Set</button>
     </div>
   </body>
 </html>
